@@ -1,0 +1,699 @@
+$dropdown-bg: rgba(0, 0, 0, 0.53);
+$theme-color: #EF0707;
+
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/code";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/dropdown";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+* :focus {
+    outline: none;
+}
+
+.loader-display {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.86);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    #loader {
+        z-index: 1001;
+        position: absolute;
+
+        .fa-mountain {
+            font-size: 40em;
+            color: whitesmoke;
+
+        }
+    }
+}
+
+.loaded .loader-display {
+    z-index: -10000;
+    opacity: 0;
+    -webkit-transition: all 1500ms cubic-bezier(0.550, 0.055, 0.675, 0.190); 
+    -moz-transition: all 1500ms cubic-bezier(0.550, 0.055, 0.675, 0.190); 
+    -o-transition: all 1500ms cubic-bezier(0.550, 0.055, 0.675, 0.190); 
+    transition: all 1500ms cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
+    
+    -webkit-transition-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190); 
+    -moz-transition-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190); 
+    -o-transition-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190); 
+    transition-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
+    
+}
+
+nav {
+    background-color: $dropdown-bg;
+}
+
+.background-img {
+    background-image: url("https://images.pexels.com/photos/791763/pexels-photo-791763.jpeg?cs=srgb&dl=barbell-black-and-white-black-and-white-791763.jpg&fm=jpg");
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 50;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.navbar-collapse {
+    display: flex;
+    font-size: 1.5em;
+    margin-right: 19px;
+    flex-direction: row-reverse;
+}
+
+
+.navbar-dark .navbar-collapse .navbar-nav li a {
+    color: white;
+    font-weight: 600;
+    margin: 0 8px 0 8px;
+}
+
+
+.navbar-dark .navbar-collapse .navbar-nav a:hover {
+    border: 2px solid $theme-color;
+    color: $theme-color;
+    border-radius: 10%;
+    background-color: $dropdown-bg;
+}
+
+
+.title {
+    display: flex;
+    height: 93vh;
+    align-items: flex-end;
+    // border-bottom: 3px solid rgba($color: #000000, $alpha: 0.75);
+    // ;
+
+    .title-container {
+        margin: 0 0 20em 14px;
+        padding: 0;
+
+        h1 {
+            color: white;
+            font-size: 3em;
+        }
+    }
+
+    .input-container {
+        input {
+            width: 40%;
+            font-size: 18px;
+            border: 0;
+            padding: 11px;
+            background-color: rgba(194, 194, 194, 0.8)
+        }
+
+        button {
+            margin-left: 14px;
+            border: none;
+            padding: 11px;
+            background-color: $theme-color;
+            color: white;
+            outline: none;
+            font-size: 18px;
+            border-radius: 5%;
+        }
+    }
+}
+
+
+.why {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 4.6em 9.3em 4.6em;
+
+    h2 {
+        font-size: 50px;
+        text-transform: uppercase;
+        color: $theme-color;
+        padding: 30px 8px 15px 0;
+    }
+
+    span {
+        border-bottom: 3px solid $dropdown-bg;
+        width: 500px;
+        margin: 0 8px 70px 0;
+    }
+
+    .why-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .gym {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 3em 0 3em;
+
+            img {
+                height: 4.5em;
+                width: 4.5em;
+            }
+
+            p {
+                padding-bottom: 30px;
+                padding-top: 13px;
+                text-align: center;
+                margin: 0;
+            }
+
+            button {
+                margin-left: 14px;
+                border: none;
+                padding: 9px;
+                background-color: $theme-color;
+                color: white;
+                outline: none;
+                font-size: 18px;
+                border-radius: 5%;
+            }
+        }
+
+        .trainers {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 4.5em 0 4.5em;
+
+            i {
+                margin-top: 3px;
+            }
+
+            p {
+                margin-top: 15px;
+                text-align: center;
+            }
+
+            button {
+                margin-left: 14px;
+                border: none;
+                padding: 9px;
+                background-color: $theme-color;
+                color: white;
+                outline: none;
+                font-size: 18px;
+                border-radius: 5%;
+            }
+
+        }
+
+        .classes {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 3em 0 3em;
+
+            p {
+                text-align: center;
+                padding-bottom: 19px;
+                padding-top: 16px;
+                margin: 0;
+            }
+
+            button {
+                margin-left: 14px;
+                border: none;
+                padding: 9px;
+                background-color: $theme-color;
+                color: white;
+                outline: none;
+                font-size: 18px;
+                border-radius: 5%;
+            }
+        }
+    }
+}
+
+.image-banner {
+    background-image: url("/assets/img/kettlebell.jpg");
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    h3 {
+        color: $theme-color;
+        padding: 0px 8px 15px 0;
+        margin-top: 60px;
+        text-transform: uppercase;
+        font-size: 52px;
+    }
+
+    p {
+        color: $theme-color;
+    }
+
+    span {
+        border-bottom: 3px solid $dropdown-bg;
+        width: 500px;
+        margin: 0 8px 70px 0;
+    }
+
+    .pricing-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+
+        .beginner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgba($color: #000000, $alpha: .89);
+            height: 375px;
+            margin: 0 29px 0 0;
+            border-radius: 15%;
+
+            h1 {
+                margin-left: 32px;
+                color: $theme-color;
+            }
+
+            h4 {
+                color: $theme-color;
+                padding-bottom: 40px;
+                margin-left: 32px;
+            }
+
+            .pricing-content {
+                color: $theme-color;
+                margin: 0 0 38px 18px;
+
+            }
+
+            button {
+                margin: 0 auto;
+                width: 40%;
+                background-color: #1b1b1b;
+                border: 1px solid $theme-color;
+                color: $theme-color;
+                padding: 9px;
+            }
+        }
+
+        .intermediate {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgba($color: #000000, $alpha: .89);
+            height: 395px;
+            color: whitesmoke;
+            margin: 0 29px 0 29px;
+            border-radius: 15%;
+            margin-bottom: 54px;
+
+            h1 {
+                margin-left: 32px;
+            }
+
+            h4 {
+                padding-bottom: 40px;
+                margin-left: 32px;
+            }
+
+            .pricing-content {
+                margin: 0 0 38px 18px;
+
+            }
+
+            button {
+                margin: 0 auto;
+                width: 40%;
+                background-color: #1b1b1b;
+                border: 1px solid $theme-color;
+                padding: 9px;
+                color: whitesmoke;
+            }
+        }
+
+        .premium {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgba($color: #000000, $alpha: .89);
+            height: 375px;
+            margin: 0 29px 0 29px;
+            border-radius: 15%;
+
+            h1 {
+                margin-left: 32px;
+                color: $theme-color;
+            }
+
+            h4 {
+                color: $theme-color;
+                padding-bottom: 40px;
+                margin-left: 32px;
+            }
+
+            .pricing-content {
+                color: $theme-color;
+                margin: 0 0 38px 18px;
+
+            }
+
+            button {
+                margin: 0 auto;
+                width: 40%;
+                background-color: #1b1b1b;
+                border: 1px solid $theme-color;
+                color: $theme-color;
+                padding: 9px;
+            }
+        }
+    }
+}
+
+/* Client Testimonials */
+
+.client-testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10% 0 10% 0;
+}
+
+.client-testimonials h2 {
+    font-size: 48px;
+    padding: 14px;
+    color: $theme-color;
+    text-transform: uppercase;
+}
+
+.client-testimonials-container {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    width: 65%;
+    -webkit-box-shadow: -4px 3px 97px 0px rgba(0, 0, 0, 0.66);
+    -moz-box-shadow: -4px 3px 97px 0px rgba(0, 0, 0, 0.66);
+    box-shadow: -4px 3px 97px 0px rgba(0, 0, 0, 0.66);
+}
+
+.client-testimonial-item {
+    border-left: 5px solid rgba(125, 125, 125, .1);
+    font-size: 1.25rem;
+    margin: 1em 0;
+    padding: 0 1em;
+}
+
+.client-name {
+    font-size: 1.2em;
+}
+
+.client-testimonial-switch-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+
+}
+
+.client-testimonial-switch {
+    background-color: $theme-color;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: .6rem;
+    margin: 0 .2rem;
+    outline: none;
+    width: .6rem;
+}
+
+.active-carousel-switch {
+    transform: scale(1.5);
+}
+
+.fast-fade-in-left {
+    animation-name: fast-fade-in-left;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.fast-fade-in-right {
+    animation-name: fast-fade-in-right;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    background-color: #1b1b1b;
+
+    .contact-container {
+        h3 {
+            text-transform: uppercase;
+            font-size: 42px;
+            padding: 14px;
+            text-align: center;
+            color: $theme-color;
+        }
+
+        hr {
+            width: 550px;
+            height: 4px;
+            background-color: $theme-color;
+            margin: 0 auto;
+            border: 0;
+        }
+
+        p {
+            font-size: 24px;
+            margin-top: 2em;
+            color: $theme-color;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+
+            .item-1 {
+                input {
+                    font-size: 28px;
+                    color: $theme-color;
+                    background-color: #1b1b1b;
+                    border-top: 0;
+                    border-left: 0;
+                    border-right: 0;
+                    border-bottom: 2px solid white;
+                    margin-left: 9px;
+                    margin-right: 9px;
+                }
+
+                input::placeholder {
+                    color: $theme-color;
+                }
+            }
+
+            .item-2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+
+                textarea {
+                    font-size: 24px;
+                    padding: 6px;
+                    color: $theme-color;
+                    margin-top: 2em;
+                    background-color: #1b1b1b;
+                    border: 2px solid $theme-color;
+                    margin-left: 9px;
+                    margin-right: 9px;
+                    height: 250px;
+                    width: 100%;
+                }
+
+                textarea::placeholder {
+                    color: $theme-color;
+                }
+
+                button {
+                    font-size: 20px;
+                    background-color: #1b1b1b;
+                    color: white;
+                    width: 25%;
+                    height: 50px;
+                    margin: 15px 0 15px 9px;
+                }
+            }
+        }
+    }
+}
+
+.location-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border: 2px solid $theme-color;
+    height: 456px;
+    width: 65%;
+    top: 100px;
+    position: relative;
+    z-index: -1;
+
+
+    h1 {
+        color: $theme-color;
+        margin: 15px 0 25px 15px;
+    }
+
+    .location-details-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .location-details-item {
+        display: flex;
+        justify-content: flex-start;
+        font-size: 22px;
+        margin-bottom: 28px;
+
+        i {
+            font-size: 19px;
+            color: $theme-color;
+            border: 1px $theme-color solid;
+            border-radius: 50%;
+            margin: 0 10px 0 10px;
+            padding: 15px;
+        }
+    }
+}
+
+
+// Pricing Animation:
+.intermediate::after {
+    content: "";
+    border-radius: 15%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.intermediate:hover {
+    -webkit-transform: scale(1.25, 1.25);
+    transform: scale(1.25, 1.25);
+}
+
+.intermediate:hover::after {
+    opacity: 1;
+}
+
+.beginner::after {
+    content: "";
+    border-radius: 15%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.beginner:hover {
+    -webkit-transform: scale(1.25, 1.25);
+    transform: scale(1.25, 1.25);
+}
+
+.beginner:hover::after {
+    opacity: 1;
+}
+
+.premium::after {
+    content: "";
+    border-radius: 15%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.premium:hover {
+    -webkit-transform: scale(1.25, 1.25);
+    transform: scale(1.25, 1.25);
+}
+
+.premium:hover::after {
+    opacity: 1;
+}
+
+
+@keyframes fast-fade-in-left {
+    from {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fast-fade-in-right {
+    from {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
