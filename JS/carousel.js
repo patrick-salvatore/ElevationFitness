@@ -1,8 +1,3 @@
-// Loading Page
-const loader = document.querySelector('.loader-display');
-console.log(loader.style)
-
-
 //Testimonials Carousel
 const testimonialCarouselContainer = document.querySelectorAll('.client-testimonial-item');
 const carouselSwitch = document.querySelectorAll('.client-testimonial-switch');

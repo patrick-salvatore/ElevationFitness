@@ -15,11 +15,10 @@
 </head>
 
 <body>
-
     <div class="loader-display">
         <div id="loader"><i class="fas fa-mountain"></i></div>
     </div>
-
+    
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <!-- <div class="brand-title"> -->
@@ -225,7 +224,20 @@
 
 
 
-    <script src="JS/index.js"></script>
+    <script>
+        $(document).ready(function () {
+            // $('body').addClass('fade-in')
+            let d = document.querySelector('.loader-display')
+            setInterval(function() {
+                $(d).addClass('loaded')
+            }, 1000)
+            setInterval(function() {
+                $(d).addClass('remove')
+            }, 3000)
+        })
+    </script>
+    <!-- <script src="JS/loader.js"></script> -->
+    <script src="JS/carousel.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>

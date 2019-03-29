@@ -1,0 +1,1 @@
+This is a gym langing page for Elevation fitness. It was made to practice HTML CSS, and the introduction to SASS.
