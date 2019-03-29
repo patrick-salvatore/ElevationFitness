@@ -28,15 +28,6 @@ $theme-color: #EF0707;
     outline: none;
 }
 
-// body {
-//     opacity: 0;
-//     transition: none;
-// }
-// body.fade-in {
-//     opacity: 1;
-//     transition: 2s opacity ease-in;
-// }
-
 .loader-display {
     position: fixed;
     top: 0;
@@ -83,13 +74,11 @@ nav {
     flex-direction: row-reverse;
 }
 
-
 .navbar-dark .navbar-collapse .navbar-nav li a {
     color: white;
     font-weight: 600;
     margin: 0 8px 0 8px;
 }
-
 
 .navbar-dark .navbar-collapse .navbar-nav a:hover {
     border: 2px solid $theme-color;
@@ -103,12 +92,13 @@ nav {
     display: flex;
     height: 93vh;
     align-items: flex-end;
-    // border-bottom: 3px solid rgba($color: #000000, $alpha: 0.75);
-    // ;
+    justify-content: flex-end;
+    text-align: end;
 
     .title-container {
         margin: 0 0 20em 14px;
         padding: 0;
+        max-width: 50%;
 
         h1 {
             color: white;
@@ -143,10 +133,10 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 4.6em 9.3em 4.6em;
+    margin: 0 4.6em 8.3em 4.6em;
 
     h2 {
-        font-size: 50px;
+        font-size: 4em;
         text-transform: uppercase;
         color: $theme-color;
         padding: 30px 8px 15px 0;
@@ -175,14 +165,11 @@ nav {
             }
 
             p {
-                padding-bottom: 30px;
-                padding-top: 13px;
-                text-align: center;
+                text-align: justify;
                 margin: 0;
             }
 
             button {
-                margin-left: 14px;
                 border: none;
                 padding: 9px;
                 background-color: $theme-color;
@@ -193,50 +180,21 @@ nav {
             }
         }
 
-        .trainers {
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0 4.5em 0 4.5em;
-
-            i {
-                margin-top: 3px;
-            }
-
-            p {
-                margin-top: 15px;
-                text-align: center;
-            }
-
-            button {
-                margin-left: 14px;
-                border: none;
-                padding: 9px;
-                background-color: $theme-color;
-                color: white;
-                outline: none;
-                font-size: 18px;
-                border-radius: 5%;
-            }
-
-        }
-
-        .classes {
+        div {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin: 0 3em 0 3em;
 
             p {
-                text-align: center;
+                text-align: justify;
+
                 padding-bottom: 19px;
                 padding-top: 16px;
                 margin: 0;
             }
 
             button {
-                margin-left: 14px;
                 border: none;
                 padding: 9px;
                 background-color: $theme-color;
@@ -256,10 +214,12 @@ nav {
     width: 100%;
 }
 
-.container {
+.pricing {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 12px;
+    padding: 0 30px;
 
 
     h3 {
@@ -285,17 +245,18 @@ nav {
         justify-content: space-between;
         margin-top: 25px;
 
-        .beginner {
+        div {
             display: flex;
             flex-direction: column;
             justify-content: center;
             background-color: rgba($color: #000000, $alpha: .89);
             height: 375px;
-            margin: 0 29px 0 0;
+            margin: 0;
             border-radius: 15%;
+            padding: 10px;
 
             h1 {
-                margin-left: 32px;
+                margin: 0 16px;
                 color: $theme-color;
             }
 
@@ -307,8 +268,8 @@ nav {
 
             .pricing-content {
                 color: $theme-color;
-                margin: 0 0 38px 18px;
-
+                margin: 0 30px;
+                background-color: rgba(0, 0, 0, 0.815);
             }
 
             button {
@@ -328,9 +289,10 @@ nav {
             background-color: rgba($color: #000000, $alpha: .89);
             height: 395px;
             color: whitesmoke;
-            margin: 0 29px 0 29px;
+            margin: 0 29px;
             border-radius: 15%;
             margin-bottom: 54px;
+            padding: 10px;
 
             h1 {
                 margin-left: 32px;
@@ -342,8 +304,9 @@ nav {
             }
 
             .pricing-content {
-                margin: 0 0 38px 18px;
-
+                margin: 0 30px;
+                color: white;
+                background-color: rgba($color: #000000, $alpha: .89);
             }
 
             button {
@@ -353,42 +316,6 @@ nav {
                 border: 1px solid $theme-color;
                 padding: 9px;
                 color: whitesmoke;
-            }
-        }
-
-        .premium {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background-color: rgba($color: #000000, $alpha: .89);
-            height: 375px;
-            margin: 0 29px 0 29px;
-            border-radius: 15%;
-
-            h1 {
-                margin-left: 32px;
-                color: $theme-color;
-            }
-
-            h4 {
-                color: $theme-color;
-                padding-bottom: 40px;
-                margin-left: 32px;
-            }
-
-            .pricing-content {
-                color: $theme-color;
-                margin: 0 0 38px 18px;
-
-            }
-
-            button {
-                margin: 0 auto;
-                width: 40%;
-                background-color: #1b1b1b;
-                border: 1px solid $theme-color;
-                color: $theme-color;
-                padding: 9px;
             }
         }
     }
@@ -611,8 +538,8 @@ nav {
 }
 
 .intermediate:hover {
-    -webkit-transform: scale(1.25, 1.25);
-    transform: scale(1.25, 1.25);
+    -webkit-transform: scale(1.02, 1.02);
+    transform: scale(1.02, 1.02);
 }
 
 .intermediate:hover::after {
@@ -635,8 +562,8 @@ nav {
 }
 
 .beginner:hover {
-    -webkit-transform: scale(1.25, 1.25);
-    transform: scale(1.25, 1.25);
+    -webkit-transform: scale(1.02, 1.02);
+    transform: scale(1.02, 1.02);
 }
 
 .beginner:hover::after {
@@ -659,8 +586,8 @@ nav {
 }
 
 .premium:hover {
-    -webkit-transform: scale(1.25, 1.25);
-    transform: scale(1.25, 1.25);
+    -webkit-transform: scale(1.02, 1.02);
+    transform: scale(1.02, 1.02);
 }
 
 .premium:hover::after {

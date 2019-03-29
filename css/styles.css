@@ -4023,10 +4023,13 @@ nav {
 .title {
   display: flex;
   height: 93vh;
-  align-items: flex-end; }
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-align: end; }
   .title .title-container {
     margin: 0 0 20em 14px;
-    padding: 0; }
+    padding: 0;
+    max-width: 50%; }
     .title .title-container h1 {
       color: white;
       font-size: 3em; }
@@ -4050,9 +4053,9 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 4.6em 9.3em 4.6em; }
+  margin: 0 4.6em 8.3em 4.6em; }
   .why h2 {
-    font-size: 50px;
+    font-size: 4em;
     text-transform: uppercase;
     color: #EF0707;
     padding: 30px 8px 15px 0; }
@@ -4073,12 +4076,9 @@ nav {
         height: 4.5em;
         width: 4.5em; }
       .why .why-container .gym p {
-        padding-bottom: 30px;
-        padding-top: 13px;
-        text-align: center;
+        text-align: justify;
         margin: 0; }
       .why .why-container .gym button {
-        margin-left: 14px;
         border: none;
         padding: 9px;
         background-color: #EF0707;
@@ -4086,37 +4086,17 @@ nav {
         outline: none;
         font-size: 18px;
         border-radius: 5%; }
-    .why .why-container .trainers {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0 4.5em 0 4.5em; }
-      .why .why-container .trainers i {
-        margin-top: 3px; }
-      .why .why-container .trainers p {
-        margin-top: 15px;
-        text-align: center; }
-      .why .why-container .trainers button {
-        margin-left: 14px;
-        border: none;
-        padding: 9px;
-        background-color: #EF0707;
-        color: white;
-        outline: none;
-        font-size: 18px;
-        border-radius: 5%; }
-    .why .why-container .classes {
+    .why .why-container div {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin: 0 3em 0 3em; }
-      .why .why-container .classes p {
-        text-align: center;
+      .why .why-container div p {
+        text-align: justify;
         padding-bottom: 19px;
         padding-top: 16px;
         margin: 0; }
-      .why .why-container .classes button {
-        margin-left: 14px;
+      .why .why-container div button {
         border: none;
         padding: 9px;
         background-color: #EF0707;
@@ -4131,100 +4111,82 @@ nav {
   height: 500px;
   width: 100%; }
 
-.container {
+.pricing {
   display: flex;
   flex-direction: column;
-  align-items: center; }
-  .container h3 {
+  align-items: center;
+  margin: 0 12px;
+  padding: 0 30px; }
+  .pricing h3 {
     color: #EF0707;
     padding: 0px 8px 15px 0;
     margin-top: 60px;
     text-transform: uppercase;
     font-size: 52px; }
-  .container p {
+  .pricing p {
     color: #EF0707; }
-  .container span {
+  .pricing span {
     border-bottom: 3px solid rgba(0, 0, 0, 0.53);
     width: 500px;
     margin: 0 8px 70px 0; }
-  .container .pricing-container {
+  .pricing .pricing-container {
     display: flex;
     justify-content: space-between;
     margin-top: 25px; }
-    .container .pricing-container .beginner {
+    .pricing .pricing-container div {
       display: flex;
       flex-direction: column;
       justify-content: center;
       background-color: rgba(0, 0, 0, 0.89);
       height: 375px;
-      margin: 0 29px 0 0;
-      border-radius: 15%; }
-      .container .pricing-container .beginner h1 {
-        margin-left: 32px;
+      margin: 0;
+      border-radius: 15%;
+      padding: 10px; }
+      .pricing .pricing-container div h1 {
+        margin: 0 16px;
         color: #EF0707; }
-      .container .pricing-container .beginner h4 {
+      .pricing .pricing-container div h4 {
         color: #EF0707;
         padding-bottom: 40px;
         margin-left: 32px; }
-      .container .pricing-container .beginner .pricing-content {
+      .pricing .pricing-container div .pricing-content {
         color: #EF0707;
-        margin: 0 0 38px 18px; }
-      .container .pricing-container .beginner button {
+        margin: 0 30px;
+        background-color: rgba(0, 0, 0, 0.815); }
+      .pricing .pricing-container div button {
         margin: 0 auto;
         width: 40%;
         background-color: #1b1b1b;
         border: 1px solid #EF0707;
         color: #EF0707;
         padding: 9px; }
-    .container .pricing-container .intermediate {
+    .pricing .pricing-container .intermediate {
       display: flex;
       flex-direction: column;
       justify-content: center;
       background-color: rgba(0, 0, 0, 0.89);
       height: 395px;
       color: whitesmoke;
-      margin: 0 29px 0 29px;
+      margin: 0 29px;
       border-radius: 15%;
-      margin-bottom: 54px; }
-      .container .pricing-container .intermediate h1 {
+      margin-bottom: 54px;
+      padding: 10px; }
+      .pricing .pricing-container .intermediate h1 {
         margin-left: 32px; }
-      .container .pricing-container .intermediate h4 {
+      .pricing .pricing-container .intermediate h4 {
         padding-bottom: 40px;
         margin-left: 32px; }
-      .container .pricing-container .intermediate .pricing-content {
-        margin: 0 0 38px 18px; }
-      .container .pricing-container .intermediate button {
+      .pricing .pricing-container .intermediate .pricing-content {
+        margin: 0 30px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.89); }
+      .pricing .pricing-container .intermediate button {
         margin: 0 auto;
         width: 40%;
         background-color: #1b1b1b;
         border: 1px solid #EF0707;
         padding: 9px;
         color: whitesmoke; }
-    .container .pricing-container .premium {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background-color: rgba(0, 0, 0, 0.89);
-      height: 375px;
-      margin: 0 29px 0 29px;
-      border-radius: 15%; }
-      .container .pricing-container .premium h1 {
-        margin-left: 32px;
-        color: #EF0707; }
-      .container .pricing-container .premium h4 {
-        color: #EF0707;
-        padding-bottom: 40px;
-        margin-left: 32px; }
-      .container .pricing-container .premium .pricing-content {
-        color: #EF0707;
-        margin: 0 0 38px 18px; }
-      .container .pricing-container .premium button {
-        margin: 0 auto;
-        width: 40%;
-        background-color: #1b1b1b;
-        border: 1px solid #EF0707;
-        color: #EF0707;
-        padding: 9px; }
 
 /* Client Testimonials */
 .client-testimonials {
@@ -4392,8 +4354,8 @@ nav {
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
 
 .intermediate:hover {
-  -webkit-transform: scale(1.25, 1.25);
-  transform: scale(1.25, 1.25); }
+  -webkit-transform: scale(1.02, 1.02);
+  transform: scale(1.02, 1.02); }
 
 .intermediate:hover::after {
   opacity: 1; }
@@ -4413,8 +4375,8 @@ nav {
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
 
 .beginner:hover {
-  -webkit-transform: scale(1.25, 1.25);
-  transform: scale(1.25, 1.25); }
+  -webkit-transform: scale(1.02, 1.02);
+  transform: scale(1.02, 1.02); }
 
 .beginner:hover::after {
   opacity: 1; }
@@ -4434,8 +4396,8 @@ nav {
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
 
 .premium:hover {
-  -webkit-transform: scale(1.25, 1.25);
-  transform: scale(1.25, 1.25); }
+  -webkit-transform: scale(1.02, 1.02);
+  transform: scale(1.02, 1.02); }
 
 .premium:hover::after {
   opacity: 1; }

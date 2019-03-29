@@ -1,0 +1,49 @@
+@media (max-width: 768px) {
+  .loader-display {
+    display: none; }
+  .title-container {
+    font-size: 0.5em; }
+    .title-container .input-container input {
+      font-size: 0.5em;
+      width: 60%; }
+    .title-container .input-container button {
+      font-size: 0.5em; }
+  .why .why-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .why .why-container div {
+      font-size: 0.5em;
+      width: 20%; }
+      .why .why-container div p {
+        font-size: 1.5em;
+        padding: 10px 0; }
+      .why .why-container div #container_btn {
+        font-size: 2em;
+        padding: 4px;
+        margin: 5px; }
+  .pricing {
+    font-size: 0.7em; }
+    .pricing h3 {
+      font-size: 3em; }
+    .pricing .pricing-container {
+      display: flex;
+      flex-direction: row; }
+      .pricing .pricing-container .pricing-content {
+        display: none; }
+      .pricing .pricing-container div,
+      .pricing .pricing-container .intermediate {
+        height: 25%; }
+      .pricing .pricing-container h1 {
+        display: none; }
+      .pricing .pricing-container h4 {
+        font-size: 1.8em;
+        margin: 0;
+        padding: 0; } }
+
+@media (max-width: 320px) {
+  button {
+    padding: 3px; }
+  h1, h2, a {
+    font-size: 20%; } }

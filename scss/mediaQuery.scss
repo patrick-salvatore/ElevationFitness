@@ -1,0 +1,92 @@
+@media (max-width: 768px) {
+    .loader-display {
+        display: none;
+    }
+
+    .title-container {
+        font-size: 0.5em;
+
+        .input-container {
+
+            input {
+                font-size: 0.5em;
+                width: 60%
+            }
+
+            button {
+                font-size: 0.5em;
+
+            }
+        }
+    }
+
+    .why {
+
+        .why-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            div {
+                font-size: 0.5em;
+                width: 20%;
+
+                p {
+                    font-size: 1.5em;
+                    padding: 10px 0;
+                }
+
+                #container_btn {
+                    font-size: 2em;
+                    padding: 4px;
+                    margin: 5px;
+                }
+            }
+        }
+    }
+
+    .pricing {
+        font-size: 0.7em;
+
+        h3 {
+            font-size: 3em;
+        }
+
+        .pricing-container {
+            display: flex;
+            flex-direction: row;
+
+            .pricing-content {
+                display: none;
+            }
+
+            div,
+            .intermediate {
+                height: 25%;
+            }
+
+            h1 {
+                display: none;
+            }
+            h4 {
+                font-size: 1.8em;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media (max-width:320px){
+  
+    button {
+        padding: 3px;
+    }
+    h1, h2, a{
+        font-size: 20%;
+    }
+
+
+
+}

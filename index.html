@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -11,6 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
+    <link rel="stylesheet" href="css/mediaQuery.css">
     <title>TeamTapOut</title>
 </head>
 
@@ -18,17 +20,15 @@
     <div class="loader-display">
         <div id="loader"><i class="fas fa-mountain"></i></div>
     </div>
-    
+
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
-            <!-- <div class="brand-title"> -->
-            <a style="font-size: 1.8em" class="navbar-brand" href="#"><i class="fas fa-mountain"></i> Elevation
+            <a  class="navbar-brand" href="#"><i class="fas fa-mountain"></i> Elevation
                 Fitness</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span style="color: white" class="navbar-toggler-icon"></span>
             </button>
-            <!-- </div> -->
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -62,7 +62,9 @@
     <section class="title">
         <div class="background-img"></div>
         <div class="title-container">
-            <h1>Power your Mind. Power your Body. Power your life. </h1>
+            <div id="title_">
+                <h1>Power your Body. Power your Mind. Power your Life. </h1>
+            </div>
             <div class="input-container">
                 <input type="email" name="email" id="email" placeholder="Your Mail">
                 <button type="submit">Subscribe now</button>
@@ -77,30 +79,30 @@
         <div class="why-container">
             <div class="gym">
                 <img src="https://img.icons8.com/ios/50/000000/barbell-filled.png">
-                <p>Our gyms come with a variety of options for all athletes. Selections range from tennis courts,
+                <p>Our gyms come with a variety of options for all athletes and fitness enthusiasts. Selections range
+                    from tennis courts,
                     basketball courts, swimming pools, and gymnasiums.</p>
-                <button>Visit Us</button>
+                <button id="container_btn">Visit Us</button>
             </div>
             <div class="trainers">
                 <i class="fas fa-user fa-4x"></i>
                 <p>The trainers at Elevation are some of the most experienced in the industry. You'll get your pick of
                     trainer to best fit your training style and fitness goals</p>
-                <button>The Team</button>
+                <button id="container_btn">The Team</button>
             </div>
             <div class="classes">
                 <i class="fas fa-stopwatch fa-4x"></i>
                 <p>Elevation Fitness has engineered fitness programs from different disciplines for you. To ensure you
                     get the best training in the industry please contact us for .</p>
-                <button>Contact Us</button>
+                <button id="container_btn">Contact Us</button>
             </div>
         </div>
     </section>
 
 
+    <div class="image-banner"></div>
 
     <section class="pricing">
-        <div class="image-banner"></div>
-        <div class="container">
             <h3>Choose Your Program</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis distinctio ut deleniti id at!</p>
             <span></span>
@@ -133,7 +135,6 @@
                     <button>Sign Up Now!</button>
                 </div>
             </div>
-        </div>
     </section>
 
     <section class="client-testimonials wow" data-wow-delay="0.5s" id="client-testimonials"
@@ -228,10 +229,10 @@
         $(document).ready(function () {
             // $('body').addClass('fade-in')
             let d = document.querySelector('.loader-display')
-            setInterval(function() {
+            setInterval(function () {
                 $(d).addClass('loaded')
             }, 1000)
-            setInterval(function() {
+            setInterval(function () {
                 $(d).addClass('remove')
             }, 3000)
         })
